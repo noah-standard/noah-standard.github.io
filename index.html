@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>noah-standard | 개발자 페이지</title>
+  <meta name="description" content="무엇이든 만드는 인디 개발자. 요즘은 수익형 앱에 집중하고 있어요. 의뢰/협업 언제든 환영합니다." />
+  <link rel="canonical" href="https://noah-standard.github.io/" />
+  <meta property="og:title" content="noah-standard | 개발자 페이지" />
+  <meta property="og:description" content="무엇이든 만드는 인디 개발자. 수익형 앱 관심. 의뢰/협업 환영." />
+  <meta property="og:url" content="https://noah-standard.github.io/" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --bg:#0e1a2b; --card:#11223a; --fg:#f0c75e; --muted:#94a3b8;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0; font-family:ui-sans-serif,system-ui,segui ui,Roboto,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 800px at 20% 20%, #14243e 0%, var(--bg) 60%), var(--bg);
+      color:#e2e8f0; display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{max-width:960px; width:100%}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px; padding:28px 28px 24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 8px; font-size:clamp(28px,5vw,40px); color:var(--fg); letter-spacing:.02em}
+    p{margin:6px 0 14px; color:#c9d3e3; line-height:1.6}
+    .row{display:flex; flex-wrap:wrap; gap:12px; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px;
+      background:#1b2c49; color:#e2e8f0; text-decoration:none; border:1px solid rgba(255,255,255,.1);
+    }
+    .btn:hover{background:#21385b}
+    .muted{color:var(--muted); font-size:14px}
+    .star{position:fixed; inset:0; pointer-events:none}
+    .star:before{
+      content:""; position:absolute; inset:0;
+      background:
+       radial-gradient(circle at 10% 20%, rgba(240,199,94,.7) 0 1px, transparent 2px),
+       radial-gradient(circle at 80% 30%, rgba(240,199,94,.4) 0 1px, transparent 2px),
+       radial-gradient(circle at 30% 80%, rgba(240,199,94,.5) 0 1px, transparent 2px),
+       radial-gradient(circle at 60% 60%, rgba(240,199,94,.35) 0 1px, transparent 2px),
+       radial-gradient(circle at 90% 70%, rgba(240,199,94,.45) 0 1px, transparent 2px);
+      background-repeat:no-repeat;
+    }
+    .chip{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.15); background:#0f1e35; color:#cbd5e1; font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="star" aria-hidden="true"></div>
+  <main class="wrap">
+    <section class="card">
+      <span class="chip">개발자</span>
+      <h1>noah-standard</h1>
+      <p>열정 가득한 인디 개발자입니다. 뭐든지 만드는 걸 좋아하고, 요즘은 <b>수익형 앱</b>에 집중하고 있어요. 의뢰/협업은 언제든 환영합니다!</p>
+
+      <div class="row">
+        <a class="btn" href="/app-ads.txt" target="_blank" rel="noopener">app-ads.txt 열기</a>
+        <a class="btn" href="mailto:contact@your-email.example">이메일로 문의</a>
+        <!-- 필요 시 링크 추가
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.seercode.tarot" target="_blank" rel="noopener">오늘의 타로</a>
+        -->
+      </div>
+
+      <p class="muted">© <span id="y"></span> noah-standard. Built with GitHub Pages.</p>
+    </section>
+  </main>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
